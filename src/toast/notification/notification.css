@@ -1,11 +1,11 @@
-:root {
+/* :root {
     --success: #4caf50;
     --danger: #f44336;
     --info: #2196f3;
     --success-bg: rgba(76, 175, 80, 0.1);
     --danger-bg: rgba(244, 67, 54, 0.1);
     --info-bg: rgba(233, 150, 243, 0.1);
-}
+} */
 
 .toast {
     width: 340px;
