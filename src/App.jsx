@@ -1,5 +1,4 @@
 import ToastProvider, { useNotification } from "./toast/ToastProvider";
-import { useState } from "react";
 
 function App() {
   return (
@@ -13,10 +12,10 @@ function MyTest() {
   const addNotification = useNotification();
 
   function showToast() {
-    addNotification({ title: "This is test toast", position: "top-right" });
+    addNotification({ title: "This is test toast which type success", position: "top-right" });
   }
 
-  return <button onClick={showToast}>Show Toast</button>;
+  return <div className="btn-wrapper"><button onClick={showToast}>Show Toast</button></div>;
 }
 
 export default App;

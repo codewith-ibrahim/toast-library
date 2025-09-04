@@ -29,11 +29,6 @@ function ToastProvider({ children }) {
   function updateToast (id) {
     setToasts((prev) => {
         return prev.map((toast) => {
-            // if(toast.id === id){
-            //     toast.exiting = true;
-            // } else {
-            //     toast.exiting = false;
-            // }
             toast.exiting = toast.id === id;
             return toast;
         });

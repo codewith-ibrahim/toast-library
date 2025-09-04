@@ -25,7 +25,7 @@ const notification = ({
 
   let className = "toast";
   if (exiting){
-    className += "exiting-toast";
+    className += " exiting-toast";
   }
 
   return (
