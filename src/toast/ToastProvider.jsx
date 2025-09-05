@@ -1,5 +1,6 @@
-import React, { createContext, useCallback, useContext, useState } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
 import ToastContainer from "./ToastContainer";
+import toastService from "./ToastService";
 
 const ToastContext = createContext({});
 
@@ -7,6 +8,10 @@ export const useNotification = () => useContext(ToastContext);
 
 function ToastProvider({ children }) {
   const [toasts, setToasts] = useState([]);
+
+  useEffect(() =>{
+    toastService.registerNotification(addNotification);
+});
 
   const addNotification = useCallback(
     ({ title, description, type, cta, position }) => {

@@ -23,13 +23,17 @@ const notification = ({
     updateToast(id);
   }
 
+  function handleAnimationEnd () {
+    onRemove(id);
+  }
+
   let className = "toast";
   if (exiting){
     className += " exiting-toast";
   }
 
   return (
-    <div data-type={type} className={className}>
+    <div onAnimationEnd={handleAnimationEnd} data-type={type} className={className}>
       {!!onRemove && (
         <button onClick={handleRemove} className="toast-close">
           &times;

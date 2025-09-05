@@ -1,8 +1,11 @@
 import ToastProvider, { useNotification } from "./toast/ToastProvider";
-
+import toastService from "./toast/ToastService";
 function App() {
   return (
     <>
+    <button onClick={() => {
+      toastService.sendToast({ title: "This is From Another world", position: "top-right" });
+    }}>Show another world</button>
       <ToastProvider><MyTest/></ToastProvider>
     </>
   );
